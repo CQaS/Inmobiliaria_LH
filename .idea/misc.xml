@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/drawable/background_gradient.xml" value="0.1" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/drawable/card.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/drawable/ic_menu_camera.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/drawable/listview_item.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/drawable/logininput.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/drawable/rounded_corners.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/drawable/side_nav_bar.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/content_main.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/contrato_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/contratos_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/inmueble_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/inmuebles_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/inquilino_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/inquilinos_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/item_inmueble_con_contrato_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/item_inmueble_con_pagos_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/item_inmueble_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/item_pago_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/mapa_detalle.xml" value="0.14" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/nav_header_main.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/pago_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/pagos_fragment.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/layout/perfil_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/menu/main.xml" value="0.225" />
+        <entry key="..\:/Users/ST-P/AndroidStudioProjects/Inm-AppC/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
