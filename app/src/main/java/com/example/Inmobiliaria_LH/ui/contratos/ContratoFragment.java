@@ -29,7 +29,6 @@ public class ContratoFragment extends Fragment
     private TextView tvInquilino;
     private TextView tvInmueble;
     private Button btPagosC;
-    private Context context;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -70,8 +69,10 @@ public class ContratoFragment extends Fragment
                     public void onClick(View view)
 					{
                         Bundle bundle = new Bundle();
+                        //se envia Un Contrato al listado de Pagos Fragment.......
                         bundle.putSerializable("pagos", contrato);
-                        Navigation.findNavController(view).navigate(R.id.pagosFragment, bundle);
+                        Navigation.findNavController(view)
+                                .navigate(R.id.pagosFragment, bundle);
                     }
                 });
             }

@@ -68,9 +68,11 @@ public class InmuebleConContratoAdapter extends RecyclerView.Adapter<InmuebleCon
             {
 
                 Bundle bundle = new Bundle();
+                //se envia Un Inmuble a Contrato Fragment....
                 bundle.putSerializable("contrato", unInm);
                 Navigation.findNavController
-                        ((Activity) context, R.id.nav_host_fragment).navigate(R.id.contratoFragment, bundle);
+                        ((Activity) context, R.id.nav_host_fragment)
+                        .navigate(R.id.contratoFragment, bundle);
 
             }
         });

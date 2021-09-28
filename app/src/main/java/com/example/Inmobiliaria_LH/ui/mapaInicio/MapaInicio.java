@@ -65,9 +65,10 @@ public class MapaInicio extends Fragment
 
             map.addMarker
                     (
-                    new MarkerOptions()
-                    .position(Inmobiliaria)
-                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET))
+                            new MarkerOptions()
+                            .position(Inmobiliaria)
+                            .icon(BitmapDescriptorFactory
+                            .defaultMarker(BitmapDescriptorFactory.HUE_VIOLET))
                     );
 
             map.setMapType(GoogleMap.MAP_TYPE_HYBRID);

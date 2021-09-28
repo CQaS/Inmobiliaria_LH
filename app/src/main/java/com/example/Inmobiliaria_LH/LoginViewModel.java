@@ -20,12 +20,23 @@ public class LoginViewModel extends AndroidViewModel
     Context context;
     private MutableLiveData<String> mensajeMutable;
     private MutableLiveData<Propietario> verificarPro;
+    private MutableLiveData<String> llamar;
+    private long lastUpdate = 0;
+    private float last_x, last_y, last_z;
+    private static final int SHAKE_THRESHOLD = 600;
 
     public LoginViewModel(@NonNull Application application)
     {
         super(application);
         context = application.getApplicationContext();
 
+    }
+
+    public LiveData<String> getLLamar()
+    {
+        if(llamar == null)
+            llamar = new MutableLiveData<>();
+        return llamar;
     }
 
     public LiveData<String> getMensajeMutable()
@@ -73,6 +84,27 @@ public class LoginViewModel extends AndroidViewModel
         intent.putExtra("propietario", bundle);
         intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
+    }
+
+    public void setSensorLlamadas(float x, float y, float z, long c)
+    {
+        if ((c - lastUpdate) > 100)
+        {
+            long diffTime = (c - lastUpdate);
+            lastUpdate = c;
+
+            float movimiento = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
+
+            if (movimiento > SHAKE_THRESHOLD)
+            {
+                llamar.setValue("*611");
+            }
+
+            last_x = x;
+            last_y = y;
+            last_z = z;
+        }
+
     }
 }
 

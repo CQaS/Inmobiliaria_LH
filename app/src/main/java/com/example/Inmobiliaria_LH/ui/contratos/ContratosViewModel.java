@@ -45,8 +45,6 @@ public class ContratosViewModel extends AndroidViewModel
         in = ApiClient.getApi().obtenerPropiedadesAlquiladas();
         inmueblesMutable.setValue(in);
 
-        //Toast.makeText(context, "Sin respuesta", Toast.LENGTH_LONG).show();
-
     }
 
 }

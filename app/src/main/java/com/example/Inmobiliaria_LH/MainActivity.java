@@ -39,14 +39,16 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflar el menú; esto agrega elementos a la barra de acción si está presente.
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        // Inflar el menú...
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
-    public boolean onSupportNavigateUp() {
+    public boolean onSupportNavigateUp()
+    {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
@@ -114,6 +116,7 @@ public class MainActivity extends AppCompatActivity
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 }

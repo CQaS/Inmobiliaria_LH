@@ -14,37 +14,50 @@ import androidx.navigation.Navigation;
 
 import com.example.Inmobiliaria_LH.R;
 
-public class LogoutFragment extends Fragment {
+public class LogoutFragment extends Fragment
+{
 
-    public static LogoutFragment newInstance() {
+    public static LogoutFragment newInstance()
+    {
         return new LogoutFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+                             @Nullable Bundle savedInstanceState)
+    {
         View root =  inflater.inflate(R.layout.logout_fragment, container, false);
+
         cerrarSesión();
         return root;
     }
 
-    public void cerrarSesión() {
+    public void cerrarSesión()
+    {
         new AlertDialog.Builder(getContext(), R.style.AlertDialogTheme)
                 .setTitle("Cerrar Sesión")
-                .setMessage("Está a punto de cerrar la Sesión")
-                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        System.exit(0);
-                    }
-                })
-                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.perfilFragment);
-                    }
-                }).show();
+                .setMessage("Salir de Tù espacio de Negocios?")
+                .setPositiveButton
+                        ("Aceptar", new DialogInterface.OnClickListener()
+                                {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i)
+                                    {
+                                        System.exit(0);
+                                    }
+                                }
+                        )
+                .setNegativeButton
+                        ("Cancelar", new DialogInterface.OnClickListener()
+                                {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i)
+                                    {
+                                        Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.perfilFragment);
+                                    }
+                                }
+                        )
+                .show();
     }
-
 
 }

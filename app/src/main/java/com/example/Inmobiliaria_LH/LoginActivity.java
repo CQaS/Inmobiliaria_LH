@@ -31,10 +31,6 @@ public class LoginActivity extends AppCompatActivity implements SensorEventListe
     private Button btLogin;
     private SensorManager senSensorManager;
     private Sensor senAccelerometer;
-    private long lastUpdate = 0;
-    private float last_x, last_y, last_z;
-    private static final int SHAKE_THRESHOLD = 600;
-    private String llamar = "*611";
     private LoginViewModel viewModel;
 
     @Override
@@ -86,7 +82,7 @@ public class LoginActivity extends AppCompatActivity implements SensorEventListe
         etUsuario = findViewById(R.id.etUsuario);
         etContraseña = findViewById(R.id.etContraseña);
         btLogin = findViewById(R.id.btLogin);
-        //Log.d("Salida", btLogin.toString());
+
 
         btLogin.setOnClickListener(new View.OnClickListener()
         {
@@ -100,6 +96,19 @@ public class LoginActivity extends AppCompatActivity implements SensorEventListe
 
             }
         });
+
+
+        viewModel.getLLamar().observe(this, new Observer<String>()
+        {
+            @Override
+            public void onChanged(String string)
+            {
+                Intent intent = new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel: " + string));
+                startActivity(intent);
+            }
+        });
+
     }
 
 
@@ -114,25 +123,10 @@ public class LoginActivity extends AppCompatActivity implements SensorEventListe
             float y = sensorEvent.values[1];
             float z = sensorEvent.values[2];
 
-            long curTime = System.currentTimeMillis();
-            if ((curTime - lastUpdate) > 100)
-			{
-                long diffTime = (curTime - lastUpdate);
-                lastUpdate = curTime;
+            long c = System.currentTimeMillis();
 
-                float move = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
+            viewModel.setSensorLlamadas(x, y, z, c);
 
-                if (move > SHAKE_THRESHOLD)
-                {
-                    Intent intent = new Intent(Intent.ACTION_CALL);
-                    intent.setData(Uri.parse("tel: " + llamar));
-                    startActivity(intent);
-                }
-
-                last_x = x;
-                last_y = y;
-                last_z = z;
-            }
         }
 
     }

@@ -82,6 +82,21 @@ public class PerfilFragment extends Fragment
             }
         });
 
+        perfilViewModel.getEditar().observe(getViewLifecycleOwner(), new Observer<Boolean>()
+        {
+            @Override
+            public void onChanged(Boolean estado)
+            {
+                //habilita o deshabilita el estado de los editTex(true, false)...
+                etDNI.setEnabled(estado);
+                etNombre.setEnabled(estado);
+                etApellido.setEnabled(estado);
+                etEmail.setEnabled(estado);
+                etContraseña.setEnabled(estado);
+                etTelefono.setEnabled(estado);
+            }
+        });
+
         perfilViewModel.obtenerDatos();
 
         return vistaPerfil;
@@ -110,7 +125,8 @@ public class PerfilFragment extends Fragment
             {
                 btEditar.setVisibility(View.INVISIBLE);
                 btGuardar.setVisibility(View.VISIBLE);
-                habilitarEditex();
+                //habilta ediText...
+                perfilViewModel.habilitar();
             }
         });
 
@@ -134,35 +150,14 @@ public class PerfilFragment extends Fragment
 
                 btEditar.setVisibility(View.VISIBLE);
                 btGuardar.setVisibility(View.INVISIBLE);
-                deshabilitarEditex();
+                //deshabilta ediText...
+                perfilViewModel.deshabilitar();
             }
         });
 
-
     }
 
-    private void habilitarEditex()
-    {
-        etDNI.setEnabled(true);
-        etNombre.setEnabled(true);
-        etApellido.setEnabled(true);
-        etEmail.setEnabled(true);
-        etContraseña.setEnabled(true);
-        etTelefono.setEnabled(true);
-
-    }
-
-    private void deshabilitarEditex()
-    {
-        etDNI.setEnabled(false);
-        etNombre.setEnabled(false);
-        etApellido.setEnabled(false);
-        etEmail.setEnabled(false);
-        etContraseña.setEnabled(false);
-        etTelefono.setEnabled(false);
-    }
-
-    }
+}
 
 
 

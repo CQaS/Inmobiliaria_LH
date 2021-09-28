@@ -56,6 +56,7 @@ public class ContratosFragment extends Fragment
             {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 2, RecyclerView.VERTICAL, false);
                 rvInmuebles.setLayoutManager(gridLayoutManager);
+
                 adapter = new InmuebleConContratoAdapter(context, inmueble, getLayoutInflater());
                 rvInmuebles.setAdapter(adapter);
             }

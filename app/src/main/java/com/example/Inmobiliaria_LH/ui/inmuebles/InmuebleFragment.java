@@ -75,7 +75,7 @@ public class InmuebleFragment extends Fragment
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .into(ivImagenInmueble);
 
-                //estado del checkBox
+                //estado del checkBox........
                 cbEstado.setOnClickListener(new View.OnClickListener()
                 {
                     @Override

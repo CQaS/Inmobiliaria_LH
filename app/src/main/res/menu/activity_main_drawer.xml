@@ -10,11 +10,11 @@
             android:title="Inicio" />
         <item
             android:id="@+id/perfilFragment"
-            android:icon="@drawable/perfil1"
+            android:icon="@drawable/perfil"
             android:title="@string/Perfil" />
         <item
             android:id="@+id/inmueblesFragment"
-            android:icon="@drawable/inmuebles"
+            android:icon="@drawable/inmuebles3"
             android:title="@string/Inmuebles" />
         <item
             android:id="@+id/inquilinosFragment"

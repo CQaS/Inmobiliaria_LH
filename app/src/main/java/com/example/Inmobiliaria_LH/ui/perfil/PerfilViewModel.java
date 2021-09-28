@@ -12,10 +12,20 @@ public class PerfilViewModel extends ViewModel
 
     private MutableLiveData<Propietario> propietarioMutable;
     private MutableLiveData<String> mensajeMutable;
+    private MutableLiveData<Boolean> editar;
 
 
     public PerfilViewModel()
     {    }
+
+    public LiveData<Boolean> getEditar()
+    {
+        if(editar == null)
+        {
+            editar = new MutableLiveData<>();
+        }
+        return editar;
+    }
 
     public LiveData<Propietario> getPropietarioMutable()
     {
@@ -35,6 +45,16 @@ public class PerfilViewModel extends ViewModel
             mensajeMutable = new MutableLiveData<>();
         }
         return mensajeMutable;
+    }
+
+    public void habilitar()
+    {
+        editar.setValue(true);
+    }
+
+    public void deshabilitar()
+    {
+        editar.setValue(false);
     }
 
     //usuario Logueado

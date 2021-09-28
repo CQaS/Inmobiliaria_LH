@@ -19,12 +19,10 @@ public class InmueblesViewModel extends AndroidViewModel
 
     private MutableLiveData<ArrayList<Inmueble>> inmueblesMutable;
     ArrayList<Inmueble> in;
-    private Context context;
 
     public InmueblesViewModel(@NonNull Application application)
     {
         super(application);
-        context = application.getApplicationContext();
 
     }
 

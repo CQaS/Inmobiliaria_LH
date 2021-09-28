@@ -37,7 +37,7 @@ public class ContratoViewModel extends AndroidViewModel
 
     }
 
-    //aca recibimos un inmueble y se busca el contrato vigente
+    //aca recibimos un inmueble y se busca el contrato vigente.......
     public void cargarContrato(Bundle bundle)
     {
         Inmueble inmueble = (Inmueble) bundle.get("contrato");
