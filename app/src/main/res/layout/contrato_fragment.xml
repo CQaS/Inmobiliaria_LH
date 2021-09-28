@@ -189,6 +189,7 @@
             android:layout_marginEnd="56dp"
             android:layout_marginBottom="260dp"
             android:text="Ver Pagos"
+            android:textColor="#130B0B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

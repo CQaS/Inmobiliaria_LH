@@ -26,6 +26,7 @@ public class InquilinoFragment extends Fragment
     private TextView tvTelefono;
     private TextView tvGarante;
     private TextView tvTelefonoGarante;
+    private TextView txtInfo;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -47,6 +48,7 @@ public class InquilinoFragment extends Fragment
         tvTelefono = view.findViewById(R.id.tvTelefono);
         tvGarante = view.findViewById(R.id.tvGarante);
         tvTelefonoGarante = view.findViewById(R.id.tvTelefonoGarante);
+        txtInfo = view.findViewById(R.id.txtInfo);
 
         inquilinoViewModel = new ViewModelProvider(this).get(InquilinoViewModel.class);
 
@@ -63,6 +65,7 @@ public class InquilinoFragment extends Fragment
                 tvTelefono.setText(inquilino.getTelefono());
                 tvGarante.setText(inquilino.getNombreGarante());
                 tvTelefonoGarante.setText(inquilino.getTelefonoGarante());
+                txtInfo.setText(inquilino.getApellido());
 
             }
         });

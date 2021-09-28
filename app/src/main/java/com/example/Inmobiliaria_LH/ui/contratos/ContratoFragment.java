@@ -61,6 +61,7 @@ public class ContratoFragment extends Fragment
                 tvFechaInicio.setText(contrato.getFechaInicio());
                 tvFechaFin.setText(contrato.getFechaFin());
                 tvMontoAlquiler.setText("$" + contrato.getMontoAlquiler());
+                tvInmueble.setText(contrato.getInmueble().getDireccion());
                 tvInquilino.setText(contrato.getInquilino().getNombre() + " " + contrato.getInquilino().getApellido());
 
                 btPagosC.setOnClickListener(new View.OnClickListener()

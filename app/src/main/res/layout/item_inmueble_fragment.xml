@@ -20,7 +20,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="158dp"
-        android:layout_height="218dp">
+        android:layout_height="218dp"
+        android:background="#CA8C8C">
 
         <ImageView
             android:id="@+id/ivImagenInmueble"
@@ -62,10 +63,11 @@
                 android:id="@+id/tvDireccion"
                 android:layout_width="139dp"
                 android:layout_height="41dp"
+                android:gravity="center"
                 android:text="TextView"
                 android:textAlignment="center"
-                android:textColor="#0A0B0B"
-                android:textSize="16sp"
+                android:textColor="#EFF4F4"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/tvPrecio"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
