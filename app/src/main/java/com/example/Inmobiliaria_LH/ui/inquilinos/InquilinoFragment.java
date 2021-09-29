@@ -65,7 +65,7 @@ public class InquilinoFragment extends Fragment
                 tvTelefono.setText(inquilino.getTelefono());
                 tvGarante.setText(inquilino.getNombreGarante());
                 tvTelefonoGarante.setText(inquilino.getTelefonoGarante());
-                txtInfo.setText(inquilino.getApellido());
+                txtInfo.setText("Información del Inquilino " +inquilino.getApellido());
 
             }
         });
