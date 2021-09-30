@@ -3,6 +3,7 @@ package com.example.Inmobiliaria_LH;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
@@ -111,24 +112,10 @@ public class LoginActivity extends AppCompatActivity implements SensorEventListe
 
     }
 
-
     @Override
     public void onSensorChanged(SensorEvent sensorEvent)
     {
-        Sensor mySensor = sensorEvent.sensor;
-
-        if(mySensor.getType() == Sensor.TYPE_ACCELEROMETER)
-        {
-            float x = sensorEvent.values[0];
-            float y = sensorEvent.values[1];
-            float z = sensorEvent.values[2];
-
-            long c = System.currentTimeMillis();
-
-            viewModel.setSensorLlamadas(x, y, z, c);
-
-        }
-
+        viewModel.setSensorLlamar(sensorEvent);
     }
 
     @Override

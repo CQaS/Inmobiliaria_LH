@@ -5,6 +5,8 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -98,24 +100,35 @@ public class LoginViewModel extends AndroidViewModel
         context.startActivity(intent);
     }
 
-    public void setSensorLlamadas(float x, float y, float z, long c)
+    public void setSensorLlamar(SensorEvent sensorEvent)
     {
-        if ((c - lastUpdate) > 100)
+        Sensor sensor = sensorEvent.sensor;
+        if(sensor.getType() == Sensor.TYPE_ACCELEROMETER)
         {
-            long diffTime = (c - lastUpdate);
-            lastUpdate = c;
+            float x = sensorEvent.values[0];
+            float y = sensorEvent.values[1];
+            float z = sensorEvent.values[2];
 
-            float movimiento = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
+            long c = System.currentTimeMillis();
 
-            if (movimiento > SHAKE_THRESHOLD)
+            if ((c - lastUpdate) > 100)
             {
-                //set Mutable...
-                llamar.setValue("*611");
+                long diffTime = (c - lastUpdate);
+                lastUpdate = c;
+
+                float movimiento = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
+
+                if (movimiento > SHAKE_THRESHOLD)
+                {
+                    //set Mutable...
+                    llamar.setValue("*611");
+                }
+
+                last_x = x;
+                last_y = y;
+                last_z = z;
             }
 
-            last_x = x;
-            last_y = y;
-            last_z = z;
         }
 
     }
