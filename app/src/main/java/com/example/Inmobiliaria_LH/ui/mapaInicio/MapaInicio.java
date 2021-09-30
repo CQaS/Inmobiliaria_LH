@@ -1,5 +1,6 @@
 package com.example.Inmobiliaria_LH.ui.mapaInicio;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -54,8 +56,11 @@ public class MapaInicio extends Fragment
                         mapaDetalle = getLayoutInflater().inflate(R.layout.mapa_detalle,null);
                     }
 
+                    //añade texto e imagen ala posicion en mapa....
                     TextView info = mapaDetalle.findViewById(R.id.txtMarka);
-                    info.setText("Aqui estamos!");
+                    info.setText("Aqui estamos! \nJ. de Videla 55 ");
+                    ImageView imageInfo = mapaDetalle.findViewById(R.id.ivMaps);
+                    imageInfo.setImageResource(R.drawable.grecia);
 
                     return (mapaDetalle);
                 }
@@ -71,7 +76,17 @@ public class MapaInicio extends Fragment
                             .defaultMarker(BitmapDescriptorFactory.HUE_VIOLET))
                     );
 
+            //añade circunferencia...
+            CircleOptions circleOptions = new CircleOptions()
+                    .center(Inmobiliaria)
+                    .radius(40)
+                    .strokeColor(Color.parseColor("#0D47A1"))
+                    .strokeWidth(4)
+                    .fillColor(Color.argb(32, 33, 150, 243));
+            map.addCircle(circleOptions);
+
             map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+            map.getUiSettings().setZoomControlsEnabled(true);
 
             CameraPosition camPos = new CameraPosition.Builder()
                     .target(Inmobiliaria)

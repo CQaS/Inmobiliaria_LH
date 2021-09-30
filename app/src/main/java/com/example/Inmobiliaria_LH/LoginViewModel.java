@@ -1,11 +1,14 @@
 package com.example.Inmobiliaria_LH;
 
+
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -14,6 +17,9 @@ import com.example.Inmobiliaria_LH.modelo.Propietario;
 import com.example.Inmobiliaria_LH.request.ApiClient;
 
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LoginViewModel extends AndroidViewModel
 {
@@ -53,9 +59,15 @@ public class LoginViewModel extends AndroidViewModel
         return verificarPro;
     }
 
+
+
     public void autenticar(String mail, String password)
     {
-        if (mail != null && password != null && password.length() > 0 && mail.length() > 0)
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(mail);
+
+        if (mail != null && password != null && password.length() > 0 && mail.length() > 0 && matcher.matches())
         {
             Propietario propietario = ApiClient.getApi().login(mail,password);
 
@@ -97,6 +109,7 @@ public class LoginViewModel extends AndroidViewModel
 
             if (movimiento > SHAKE_THRESHOLD)
             {
+                //set Mutable...
                 llamar.setValue("*611");
             }
 
