@@ -13,10 +13,25 @@
     <string name="Inquilinos">Inquilinos</string>
     <string name="Contratos">Contratos</string>
     <string name="Pagos">Pagos</string>
-    <string name="Logout">Log out</string>
+    <string name="Logout">Salir</string>
     <string name="Cerrar_sesión">Cerrar sesión</string>
     <string name="Pago">Pago</string>
     <string name="Contrato">Contrato</string>
     <string name="Inmueble">Inmueble</string>
     <string name="Inquilio">Inquilino</string>
+    <string name="tituloPortada">Inmobiliaria\nLa Herradura</string>
+    <string name="datosDeUsuario">Datos del Usuario</string>
+    <string name="listaDeInmuebles">Lista de Inmuebles</string>
+    <string name="datosDeInmueble">Datos del Inmueble</string>
+    <string name="listaDeInquilinos">Lista de Inquilinos</string>
+    <string name="datosDelInquilino">Datos del Inquilino</string>
+    <string name="listaDeContratos">Lista de Contratos</string>
+    <string name="datosDelContrato">Datos del Contarato</string>
+    <string name="pagosDeContrato">Pagos de Un Contrato</string>
+    <string name="alertaCerrar">\nEstas a punto de cerrar tu sesion en: \n\nInmobiliaria La Herradura</string>
+    <string name="alertaSalir">Salir de la Inmobiliaria</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="infoInq">Información del Inquilino </string>
+    <string name="aquiEstamos">Aqui estamos! \nJ. de Videla 55</string>
 </resources>

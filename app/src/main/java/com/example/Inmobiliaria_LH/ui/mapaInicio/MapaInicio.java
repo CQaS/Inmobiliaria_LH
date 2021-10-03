@@ -58,7 +58,7 @@ public class MapaInicio extends Fragment
 
                     //añade texto e imagen ala posicion en mapa....
                     TextView info = mapaDetalle.findViewById(R.id.txtMarka);
-                    info.setText("Aqui estamos! \nJ. de Videla 55 ");
+                    info.setText(R.string.aquiEstamos);
                     ImageView imageInfo = mapaDetalle.findViewById(R.id.ivMaps);
                     imageInfo.setImageResource(R.drawable.grecia);
 
@@ -114,9 +114,8 @@ public class MapaInicio extends Fragment
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.mapaInicio);
 
-        if (mapFragment != null)
-        {
+
             mapFragment.getMapAsync(callback);
-        }
+
     }
 }
