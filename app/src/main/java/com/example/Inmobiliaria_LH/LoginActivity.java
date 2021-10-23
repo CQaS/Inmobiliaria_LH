@@ -51,8 +51,6 @@ public class LoginActivity extends AppCompatActivity implements SensorEventListe
 
         requestPermissions(new String[]{Manifest.permission.CALL_PHONE}, 1004);
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
         inicializar();
     }
 
